@@ -1,6 +1,7 @@
 package org.javaphile.restaurant;
 
 // LoginActivity.java
+
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -40,16 +41,15 @@ public class LoginActivity extends AppCompatActivity {
         Button loginButton = findViewById(R.id.loginButton);
         loginButton.setEnabled(true);
 
-        // Gérer la connexion
+        // Handle login button click
         loginButton.setOnClickListener(v -> {
-            Log.d("LoginAcitivity","Clicked");
-            String email = emailEditText.getText().toString();
-            String password = passwordEditText.getText().toString();
-
-            Intent i = new Intent(this, MenuCategoriesActivity.class);
-            startActivity(i);
-
+            Log.d("LoginActivity", "Clicked");
+            // Redirect to MenuCategoriesActivity
+            Intent intent = new Intent(LoginActivity.this, MenuCategoriesActivity.class);
+            startActivity(intent);
+            finish(); // Optional: Finish this activity to prevent going back to the login screen
         });
+
     }
 
     // Vérifier si les informations de connexion sont déjà enregistrées

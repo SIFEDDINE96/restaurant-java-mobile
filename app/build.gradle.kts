@@ -4,11 +4,12 @@ plugins {
 
 android {
     namespace = "org.javaphile.restaurant"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "org.javaphile.restaurant"
         minSdk = 24
+        //noinspection OldTargetApi
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -33,13 +34,15 @@ android {
 
 dependencies {
 
+    implementation ("com.android.support:recyclerview-v7:28.0.0")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
     implementation(libs.constraintlayout)
     implementation(libs.firebase.auth)
+    implementation(libs.recyclerview)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    implementation("com.google.android.gms:play-services-auth:20.6.0")
+
 }
