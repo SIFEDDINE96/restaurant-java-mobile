@@ -1,0 +1,66 @@
+<!-- activity_login.xml -->
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="16dp">
+
+    <!-- ImageView pour le logo -->
+    <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/logoimage"
+            android:layout_marginBottom="24dp"/>
+
+    <!-- Champ Email -->
+    <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:layout_marginBottom="16dp"/>
+
+    <!-- Champ Mot de passe -->
+    <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mot de passe"
+            android:inputType="textPassword"
+            android:layout_marginBottom="16dp"/>
+
+    <!-- Checkbox "Remember Me" -->
+    <CheckBox
+            android:id="@+id/rememberMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Se souvenir de moi"
+            android:layout_marginBottom="24dp"/>
+
+    <!-- Bouton de connexion classique -->
+    <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Se connecter"
+            android:layout_marginBottom="16dp"/>
+
+    <!-- Bouton de connexion via Gmail -->
+    <Button
+            android:id="@+id/gmailButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Connexion via Gmail"
+            android:layout_marginBottom="16dp"/>
+
+    <!-- Bouton de connexion via Facebook -->
+    <Button
+            android:id="@+id/facebookButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Connexion via Facebook"/>c
+</LinearLayout>
