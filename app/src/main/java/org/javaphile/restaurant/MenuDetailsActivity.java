@@ -1,6 +1,7 @@
 package org.javaphile.restaurant;
 
 import android.os.Bundle;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -32,6 +33,10 @@ public class MenuDetailsActivity extends AppCompatActivity {
         // Initialize the adapter with filtered meals and set it to RecyclerView
         mealAdapter = new MealAdapter(mealList);
         recyclerView.setAdapter(mealAdapter);
+
+        // Back button functionality
+        ImageButton backButton = findViewById(R.id.backButton);
+        backButton.setOnClickListener(v -> finish());
     }
 
     private List<Meal> getMealsForCategoryIndex(int categoryIndex) {
